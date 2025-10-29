@@ -1,40 +1,31 @@
 # 🧠 Análisis de Casos Positivos de COVID-19 en Colombia (Apache Spark)
 
 ## 📘 Descripción
-Proyecto de procesamiento **Batch con Apache Spark**, utilizando el dataset oficial **gt2j-8ykr.csv** del Instituto Nacional de Salud (INS).  
-El objetivo es realizar limpieza, transformación y análisis exploratorio de los casos de COVID-19 en Colombia.
+Procesamiento **Batch con Apache Spark** del dataset oficial **gt2j-8ykr.csv** del INS.  
+Objetivo: limpiar, transformar y analizar casos de COVID-19 en Colombia, generando indicadores de contagios, mortalidad, recuperación y distribución por sexo, edad y departamento.
 
 ---
 
 ## 🧾 Dataset
-- **Fuente:** [Datos Abiertos de Colombia](https://www.datos.gov.co/resource/gt2j-8ykr.csv)
-- **Proveedor:** Instituto Nacional de Salud (INS)
+- **Fuente:** [Datos Abiertos Colombia](https://www.datos.gov.co/resource/gt2j-8ykr.csv)  
+- **Proveedor:** Instituto Nacional de Salud (INS)  
 - **Cobertura:** Nacional  
-- **Frecuencia de actualización:** Diaria  
-- **Columnas relevantes:**
-  - fecha_reporte_web
-  - id_de_caso
-  - departamento_nom
-  - ciudad_municipio_nom
-  - edad
-  - sexo
-  - estado
-  - recuperado
-  - fuente_tipo_contagio
-  - ubicación
-  - fechas de diagnóstico, síntomas, muerte y recuperación
+- **Frecuencia:** Actualización diaria  
+- **Columnas clave:**  
+  `fecha_reporte_web`, `id_de_caso`, `departamento_nom`, `ciudad_municipio_nom`, `edad`, `sexo`, `estado`, `recuperado`, `fuente_tipo_contagio`, `ubicacion`, `fecha_inicio_sintomas`, `fecha_diagnostico`, `fecha_muerte`, `fecha_recuperado`.
 
 ---
 
 ## ⚙️ Tecnologías
-- **Apache Spark 3.5.6**
-- **Python 3.8+**
-- **Ubuntu / VirtualBox**
+- Apache Spark 3.5.6 (PySpark)  
+- Python 3.8+  
+- Ubuntu / VirtualBox  
+- HDFS local (opcional)
 
 ---
 
 ## 🚀 Ejecución
 
-1. Descargar el dataset oficial:
+1. **Descargar dataset:**
    ```bash
-   wget casos_covid.csv
+   wget https://www.datos.gov.co/resource/gt2j-8ykr.csv -O ~/casos_covid.csv
