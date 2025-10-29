@@ -1,25 +1,40 @@
-# Análisis de Casos Positivos de COVID-19 en Colombia (Apache Spark)
+# 🧠 Análisis de Casos Positivos de COVID-19 en Colombia (Apache Spark)
 
-## Descripción
-Este proyecto implementa el procesamiento **Batch con Apache Spark** sobre el conjunto de datos de **casos positivos de COVID-19 en Colombia**, publicado por el **Instituto Nacional de Salud** a través de [Datos Abiertos de Colombia](https://www.datos.gov.co/).
-
-El objetivo es demostrar el uso de Spark para **limpieza, transformación y análisis exploratorio** de grandes volúmenes de datos (más de 6 millones de registros).
+## 📘 Descripción
+Proyecto de procesamiento **Batch con Apache Spark**, utilizando el dataset oficial **gt2j-8ykr.csv** del Instituto Nacional de Salud (INS).  
+El objetivo es realizar limpieza, transformación y análisis exploratorio de los casos de COVID-19 en Colombia.
 
 ---
 
-## Dataset
-- **Nombre:** Casos positivos de COVID-19 en Colombia  
-- **Fuente:** Instituto Nacional de Salud – [INS](https://www.ins.gov.co/Noticias/Paginas/Coronavirus.aspx)  
+## 🧾 Dataset
+- **Fuente:** [Datos Abiertos de Colombia](https://www.datos.gov.co/resource/gt2j-8ykr.csv)
+- **Proveedor:** Instituto Nacional de Salud (INS)
 - **Cobertura:** Nacional  
-- **Actualización:** Diaria  
-- **Filas:** ~6,39 millones  
-- **Columnas:** 23  
-- **Licencia:** Creative Commons Attribution-ShareAlike 4.0 International  
+- **Frecuencia de actualización:** Diaria  
+- **Columnas relevantes:**
+  - fecha_reporte_web
+  - id_de_caso
+  - departamento_nom
+  - ciudad_municipio_nom
+  - edad
+  - sexo
+  - estado
+  - recuperado
+  - fuente_tipo_contagio
+  - ubicación
+  - fechas de diagnóstico, síntomas, muerte y recuperación
 
 ---
 
-## Tecnologías
-- Apache Spark 3.5.6  
-- Python 3.8+  
-- Ubuntu / VirtualBox  
+## ⚙️ Tecnologías
+- **Apache Spark 3.5.6**
+- **Python 3.8+**
+- **Ubuntu / VirtualBox**
 
+---
+
+## 🚀 Ejecución
+
+1. Descargar el dataset oficial:
+   ```bash
+   wget casos_covid.csv
