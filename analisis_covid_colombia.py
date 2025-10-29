@@ -12,7 +12,7 @@ spark.sparkContext.setLogLevel("WARN")
 
 # 2️ Ruta local del archivo CSV descargado
 #   (usa 'file:///' para lectura en Linux/Ubuntu dentro de la VM)
-file_path = "file:///home/hadoop/casos_covid.csv"
+file_path = "file:///home/hadoop/gt2j-8ykr.csv"
 
 # 3️⃣ Cargar dataset CSV con comillas y encabezados
 df = spark.read.csv(
@@ -119,3 +119,4 @@ print(f"\n✅ Datos limpios guardados en {output_path}")
 # Cerrar sesión
 spark.stop()
 print("\n🚀 Análisis completado con éxito.")
+
